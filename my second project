@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+
+  string name;
+  unsigned short Age;
+  unsigned short M_salary;
+  unsigned int Y_salary;
+  char G;
+  bool M;
+  string city;
+  string country;
+
+  cout << "please enter you Name" << endl;
+  cin >> name;
+  cout << "please enter your Age" << endl;
+  cin >> Age;
+  cout << "please enter your City" << endl;
+  cin >> city;
+  cout << "please enter your Country" << endl;
+  cin >> country;
+  cout << "please enter your Monthly Salary"<<endl;
+  cin >> M_salary;
+  cout << "please enter your Gender  M or F" << endl;
+  cin >> G;
+  cout << "are you married 0 or 1"<<endl;
+  cin >> M;
+
+
+  cout << "|__________________________________________________|" << endl;
+  cout << "|Name           :" << name << endl;
+  cout << "|Age            :" << Age << endl;
+  cout << "|City           :" << city << endl;
+  cout << "|Country        :" << country << endl;
+  cout << "|Monthly Salary :" << M_salary << endl;
+  cout << "|Yearly Salary  :" << M_salary * 12 << endl;
+  cout << "|Gender         :" << G << endl;
+  cout << "|Married        :" << M << endl;
+  cout << "|--------------------------------------------------|" << endl;
+
+
+
+  return 0;
+
+}
