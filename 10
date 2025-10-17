@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  
+  int hight;
+  int base;
+
+  cout << "please enter hight and base" << endl;
+  cout << "hight is ";
+  cin >> hight;
+  cout << "base is ";
+  cin >> base;
+
+  int Area = hight * (base / 2);
+  
+  cout << "your trangle's area is " << Area << endl;
+
+
+  return 0;
+
+}
