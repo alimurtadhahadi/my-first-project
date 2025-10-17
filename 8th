@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  int num1;
+  int num2;
+  cout << "please enter 2 numbers" << endl;
+  cin >> num1;
+  cin >> num2;
+  cout <<"_______________________________________" << endl << "you enter this numbers" << endl << num1 << endl << num2 << endl;
+
+  int temp = num1;
+  num1 = num2;
+    num2 = temp;
+  cout << "I swapped your numbers" << endl;
+  cout << num1 << endl << num2 << endl << "_____________________________________";
+
+  return 0;
+
+}
