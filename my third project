@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+  int num1;
+  int num2;
+  int num3;
+  
+cout << "please enter the numbers" << endl;
+  cin >> num1;
+  cin >> num2;
+  cin >> num3;
+  int sum1 = num1 + num2 + num3;
+  cout << num1 << endl;
+  cout << num2 << "+" <<endl;
+  cout << num3 << "+" << endl;
+  cout << "----------------" << endl;
+  cout << "  total =" << sum1 << "\t" << endl;
+
+
+
+  return 0;
+
+
+}
