@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+
+  unsigned short L;
+  unsigned short W;
+  unsigned short H;
+  cout << "enter the long"<<endl;
+  cin >> L ;
+  cout << "enter the wide"<<endl;
+  cin >> W ;
+  cout << "enter the hight"<<endl;
+  cin >> H ;
+  cout << L * W * H;
+  
+
+
+  return 0;
+}
