@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  
+  const float PI = 3.14;
+  unsigned short R;
+
+  cout << "please enter the diameter"<< endl;
+  cin >> R;
+  float area = (R / 2) * (R / 2) * PI;
+
+  cout << "your circle's area is " << area << endl;
+
+  return 0;
+
+}
