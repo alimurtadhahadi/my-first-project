@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  
+  int L;
+  int W;
+
+  cout << "enter the long and wide of ractingle" << endl;
+  cin >> L;
+  cin >> W;
+  int area = L * W;
+  cout << "your ractangle's area is " << area << endl;
+
+
+
+
+
+
+
+
+  return 0;
+
+}
