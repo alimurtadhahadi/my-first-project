@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  int num;
+  
+    cout << "please enter number. " << endl;
+  cin >> num;
+  int half_num = num / 2;
+  int remainder = num % 2;
+    cout << "half number of " << num << "=" << half_num << endl;
+  cout << "and the remander is " << remainder << endl;
+
+  return 0;
+
+
+
+
+}
