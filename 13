@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  const float PI = 3.14;
+  unsigned short A;
+
+  cout << "please enter the side" << endl;
+  cin >> A;
+
+  float Area_C = (A / 2) * (A / 2) * PI;
+  int Area_S = A * A;
+
+  cout << "your circle's Area is " << Area_C << endl;
+
+  cout << "your square's Area is " << Area_S << endl;
+
+
+
+  return 0;
+
+}
