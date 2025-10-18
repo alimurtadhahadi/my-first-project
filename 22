@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+
+int Loan_Amunt;
+int How_many_months;
+
+  cout << "please enter your Loan amunt " << endl;
+  cin >> Loan_Amunt;
+  cout << "And How many months" << endl;
+  cin >> How_many_months;
+int total_month = Loan_Amunt / How_many_months;
+
+cout << total_month << endl;
+
+    return 0;
+
+}
