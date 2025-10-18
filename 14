@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  
+  const float PI = 3.14;
+  float A;
+  float B;
+
+  cout << "please enter the side and base of your triangle to calculte the circle area" << endl;
+  cin >> A;
+  cin >> B;
+
+
+  float Area = PI * (B * B / 4) * ((2 * A - B) / (2 * A + B));
+
+  cout << "your circle input trangle's Area is " << Area << endl;
+
+  return 0;
+
+}
