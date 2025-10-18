@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main ()
+{
+
+  float S;
+  float D;
+
+  cout << "please enter diagonal and side area of your rectangel." << endl;
+  cin >> S;
+  cin >> D;
+
+  double area = S * sqrt(pow(D, 2) - pow(S, 2));
+
+  cout << "your rectanel's area is " << area << endl;
+
+
+  return 0;
+
+}
