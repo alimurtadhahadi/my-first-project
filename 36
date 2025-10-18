@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+struct stOwner
+{
+  string Address;
+  int phone;
+  string email;
+  string Gender;
+  bool Married;
+};
+struct stSalary
+{
+  stOwner Owner;
+  int montly;
+  int yearly;
+
+};
+struct stNACCSO
+{
+  stSalary Salary;
+  string Name;
+  unsigned short Age;
+  string City;
+  string country;
+
+
+
+};
+  int main ()
+{
+    stNACCSO Card_informaton;
+    
+    cout << "please enter your name " << endl;
+    cin >> Card_informaton.Name;
+    cout << "please enter your Age " << endl;
+    cin >> Card_informaton.Age;
+    cout << "please enter your city" << endl;
+    cin >> Card_informaton.City;
+    cout << "please enter your country" << endl;
+    cin >> Card_informaton.country;
+    cout << "please enter your Montly salary" << endl;
+    cin >> Card_informaton.Salary.montly;
+    Card_informaton.Salary.yearly = Card_informaton.Salary.montly * 12;
+    cout << "please enter your Gender write male or female" << endl;
+    cin >> Card_informaton.Salary.Owner.Gender;
+    cout << "are you married please write true=1 or false=0" << endl;
+    cin >> Card_informaton.Salary.Owner.Married;
+    cout << "please enter your address" << endl;
+    cin >> Card_informaton.Salary.Owner.Address;
+    cout << "please enter your phone number " << endl;
+    cin >> Card_informaton.Salary.Owner.phone;
+    cout << "please enter your email" << endl;
+    cin >> Card_informaton.Salary.Owner.email;
+
+    cout << "|________________________________________________________________|" << endl;
+    cout << "|name         :" << Card_informaton.Name << endl;
+    cout << "|Age          :" << Card_informaton.Age << endl;
+    cout << "|city         :" << Card_informaton.City << endl;
+    cout << "|country      :" << Card_informaton.country << endl;
+    cout << "|M_salary     :" << Card_informaton.Salary.montly << endl;
+    cout << "|Y_salary     :" << Card_informaton.Salary.yearly << endl;
+    cout << "|Gender       :" << Card_informaton.Salary.Owner.Gender << endl;
+    cout << "|married      :" << Card_informaton.Salary.Owner.Married << endl;
+    cout << "|Address      :" << Card_informaton.Salary.Owner.Address << endl;
+    cout << "|phone number :" << Card_informaton.Salary.Owner.phone << endl;
+    cout << "|email        :" << Card_informaton.Salary.Owner.email << endl;
+    cout << "|-----------------------------------------------------------------|" << endl;
+
+
+
+      return 0;
+  
+  
+
+}
