@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main()
+{
+    const float PI = 3.14;
+    float a;
+    float b;
+    float c;
+
+    cout << "enter your three sides of triangle" << endl;
+    cout << "enter the first side" << endl;
+    cin >> a;
+    cout << "enter the second side" << endl;
+    cin >> b;
+    cout << "enter the third side" << endl;
+    cin >> c;
+
+    float P = (a + b + c) / 2;
+
+    float area = PI * pow((a * b * c) / (4 * sqrt(P * (P - a) * (P - b) * (P - c))), 2);
+
+    cout << "your circle's area is ~ " << round(area) << endl;
+
+    return 0;
+}
