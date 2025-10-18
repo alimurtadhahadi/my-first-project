@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main ()
+{
+  const float PI = 3.14;
+  float a;
+  float b;
+  cout << "enter your two sids of isosceles triangle" << endl;
+  cout << "enter the long side" << endl;
+  cin >> a;
+  cout << "enter the short side" << endl;
+  cin >> b;
+  
+  float Area = PI * (pow(b, 2) / 4) * ((2 * a - b) / (2 * a + b));
+
+  cout << "your circle's Area is ~ " << floor(Area) << endl;
+
+
+
+
+  return 0;
+
+}
