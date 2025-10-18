@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  
+  int num1;
+
+  cout << "please enter number" << endl;
+    cin >> num1;
+
+    int num2 = num1 * num1;
+    int num3 = num1 * num1 * num1;
+    int num4 = num1 * num1 * num1 * num1;
+
+    cout << num2 << endl << num3 << endl << num4 << endl;
+
+
+
+
+
+
+  return 0;
+
+}
