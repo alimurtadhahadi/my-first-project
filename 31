@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main()
+{
+    
+    float a;
+    
+    cout << "please enter your number" << endl;
+    cin >> a;
+
+    cout << a << "^2 = " << round(pow(a, 2)) << endl;
+    cout << a << "^3 = " << round(pow(a, 3)) << endl;
+    cout << a << "^4 = " << round(pow(a, 4)) << endl;
+
+
+    return 0;
+}
