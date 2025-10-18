@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+
+    int total_second;
+    cout << "please enter work's seconds" << endl;
+    cin >> total_second;
+
+    const int second_per_day = 24 * 60 * 60;
+    const int second_per_hour = 60 * 60;
+    const int second_per_minutes = 60;
+
+    int number_of_days = round(total_second / second_per_day);
+    int Remainder = total_second % second_per_day;
+
+    int number_of_hours = round(Remainder / second_per_hour);
+    Remainder = Remainder % second_per_hour;
+
+    int number_of_minutes = round(Remainder / second_per_minutes);
+    Remainder = Remainder % second_per_minutes;
+
+    int number_of_second = Remainder;
+
+    cout << "|___________|" << endl;
+    cout << "|" << round(number_of_days) << ":" << round(number_of_hours) << ":" << round(number_of_minutes) << ":" << round(number_of_second) << " |" << endl;
+    cout << "|-----------|";
+
+
+
+
+    return 0;
+
+}
