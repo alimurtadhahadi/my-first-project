@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main ()
+{
+  const float PI = 3.14;
+  float S;
+
+  cout << "please enter your cube's side." << endl;
+  cin >> S;
+
+  float Area = PI * pow(S, 2) / 4;
+
+  cout << "your circle's area is ~ " << ceil(Area) << endl;
+
+
+  return 0;
+
+}
