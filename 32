@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main()
+{
+    
+    float num;
+    float pow1;
+    
+    cout << "please enter your number " << endl;
+    cin >> num;
+    cout << "and power " << endl;
+    cin >> pow1;
+    float R = pow(num, pow1);
+    cout << "the result is " << R << endl;
+
+    return 0;
+}
