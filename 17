@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  
+  float total_bill;
+  float cash_paid;
+
+  cout << "please enter your cash paid"<<endl;
+  cin >> cash_paid;
+  cout << "And total bill" << endl;
+  cin >> total_bill;
+
+  float Remainder = cash_paid - total_bill;
+
+  cout << "remainder is " << Remainder << endl;
+
+
+
+
+
+
+  return 0;
+
+}
