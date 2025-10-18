@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+  
+  int pennies;
+  int nickels;
+  int dims;
+  int quaters;
+  int dollers;
+
+  cout << "enter your pennies,nickels,dims,quaters and dollers" << endl;
+  cin >> pennies;
+  cin >> nickels;
+  cin >> dims;
+  cin >> quaters;
+  cin >> dollers;
+
+  float total_pennies = pennies * 1 + nickels * 5 + dims * 10 + quaters * 25 + dollers * 100;
+
+  float total_dollors = total_pennies / 100;
+
+  cout <<endl<< "your total pennies is " << total_pennies << endl;
+  cout << "your total dollers is " << total_dollors << endl;
+
+
+  return 0;
+
+}
