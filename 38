@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	
+	string str1 = "43.22";
+
+	int num1 = stoi(str1);
+	cout << "The integer value is: " << num1 << endl;
+	float num2 = stof(str1);
+	cout << "The float value is: " << num2 << endl;
+	double num3 = stod(str1);
+	cout << "The double value is: " << num3 << endl;
+
+	int num4 = 20;
+	double num5 = 33.5;
+	float num6 = 55.23;
+	int num7;
+	string str2, str3, str4;
+	str2 = to_string(num4);
+	str3 = to_string(num5);
+	str4 = to_string(num6);
+	num7 = (int)num6;
+	cout << "The string value of num4 is: " << str2 << endl;
+	cout << "The string value of num5 is: " << str3 << endl;
+	cout << "The string value of num6 is: " << str4 << endl;
+	cout << "The integer value of num6 is: " << num7 << endl;
+
+
+
+
+
+
+
+
+	return 0;
+}
