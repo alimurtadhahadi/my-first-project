@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+enum stutes { single, married };
+enum Gender { male, famale };
+enum color { red=1, green, blue, black, white };
+
+struct stSalary
+{
+  int monthly;
+  int yearly;
+
+};
+struct stNACCSO
+{
+  stSalary Salary;
+  string Name;
+  unsigned short Age;
+  string City;
+  string country;
+
+
+
+};
+  int main ()
+{
+      stutes stutes;
+	  Gender gender;
+	  color mycolor;
+    stNACCSO Card_information;
+    
+    Card_information.Name="Ali_Murtada_Hadi";
+    Card_information.Age = 13;
+    Card_information.City = "diwanyah";
+    Card_information.country = "Iraq";
+    Card_information.Salary.monthly = 15;
+	Card_information.Salary.yearly = 15 * 12;
+    gender = male;
+	stutes = single;
+    mycolor = black;
+
+    cout << "|________________________________________________________________|" << endl;
+    cout << "|name         :" << Card_information.Name << endl;
+    cout << "|Age          :" << Card_information.Age << endl;
+    cout << "|city         :" << Card_information.City << endl;
+    cout << "|country      :" << Card_information.country << endl;
+    cout << "|M_salary     :" << Card_information.Salary.monthly <<" $"<< endl;
+    cout << "|Y_salary     :" << Card_information.Salary.yearly <<" $" << endl;
+    cout << "|Gender       :" << gender << endl;
+    cout << "|married      :" << stutes << endl;
+	cout << "|color        :" << mycolor << endl;
+    cout << "|-----------------------------------------------------------------|" << endl;
+
+
+
+      return 0;
+  
+  
+
+}
