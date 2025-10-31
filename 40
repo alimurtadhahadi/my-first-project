@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	short age;
+	string name;
+	string city;
+	string country;
+	string fullAddress;
+	long long phoneNumber;
+	string email;
+	string stutes;
+	string gender;
+
+	cout << "Enter your name: ";
+	getline(cin, name);
+	cout << "Hello, " << name << "!" << endl;
+	cout << "Enter your age: ";
+	cin >> age;
+	cout << "You are " << age << " years old." << endl;
+	cout << "Enter your country: ";
+	getline(cin, country);
+	cout << "Enter your city: ";
+	getline(cin, city);
+	cout << "You are from: " << city << ", " << country << endl;
+	cout << "Enter your full address: ";
+	getline(cin, fullAddress);
+	cout << "Your full address is: " << fullAddress << ", " << city << ", " << country << endl;
+	cout << "Enter your phone number: ";
+	cin >> phoneNumber;
+	cout << "Your phone number is: " << phoneNumber << endl;
+	cout << "Enter your email: ";
+	cin >> email;
+	cout << "Your email is: " << email << endl;
+	cout << "Enter your status (single/married): ";
+	cin >> stutes;
+	cout << "Your status is: " << stutes << endl;
+	cout << "Enter your gender ( male / female ): "; 
+	cin >> gender; 
+	cout << " Your gender is : " << gender << endl;	
+
+
+
+
+
+	return 0;
+}
