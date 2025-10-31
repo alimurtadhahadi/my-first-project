@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	string str1;
+	string str2;
+	string str3;
+	int num1;
+	cout << "Enter first string: ";
+	getline(cin, str1);	
+	cout << "Enter second string but number: ";
+	getline(cin, str2);
+	cout << "Enter third string but number: ";
+	getline(cin, str3);
+	cout << "the length of the first string is : " << str1.length() << endl;
+	cout << "please enter a number from 0 to " << str1.length() << " to search for your letter's you want" << endl;
+	cin >> num1;
+	cout << "the letter you want is : " << str1[num1] << endl;
+	cout << "the concatenation of 2nd and 3rd string is : " << str2 + str3 << endl;
+	cout << "the multiplying of 2nd string with 3rd is : ";
+	int sum = stoi(str2) * stoi(str3);
+	cout << sum << endl;
+
+
+
+
+
+	return 0;
+}
