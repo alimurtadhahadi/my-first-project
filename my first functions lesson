@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+void my_info()
+{
+
+	cout << "|________________________________|" << endl;
+	cout << "|First name   :Ali murtada       |" << endl;
+	cout << "|Last name    :hadi              |" << endl;
+	cout << "|Age          :13                |" << endl;
+	cout << "|Country      :Iraq              |" << endl;
+	cout << "|City         :Diwanyah          |" << endl;
+	cout << "|Gender       :male              |" << endl;
+	cout << "|Stute        :single            |" << endl;
+	cout << "|________________________________|" << endl;
+
+}
+void print_stars()
+{
+
+	cout << "**********************************" << endl;
+	cout << "**********************************" << endl;
+	cout << "**********************************" << endl;
+	cout << "**********************************" << endl;
+
+}
+void print_message()
+{
+
+	cout << "I love programming!" << endl;
+	cout << "C++ is my favorite language!" << endl;
+	cout << "I want to be a Cyber security engineer!" << endl;
+	cout << "I love problem solving!" << endl;
+
+}
+void print_MyFirstLetteer()
+{
+	cout << "        A             M              M" << endl;
+	cout << "       A A            M M          M M" << endl;
+	cout << "      A   A           M   M      M   M" << endl;
+	cout << "     AAAAAAA          M     M  M     M" << endl;
+	cout << "    A       A         M      MM      M" << endl;
+	cout << "   A         A        M              M" << endl;
+	cout << "  A           A       M              M" << endl;
+	cout << " A             A      M              M" << endl;
+	
+   
+} 
+int main()
+{
+	my_info();
+	print_stars();
+	print_message();
+	print_stars();
+	print_MyFirstLetteer();
+	return 0;
+}
