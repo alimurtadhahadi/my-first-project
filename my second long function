@@ -1,0 +1,170 @@
+#include <iostream>
+#include <string>
+using namespace std;
+const float PI = 3.14;
+int x, y, r;
+void circleArea ()
+{
+	 cout << "Enter the radius of the circle: ";
+	 cin >> r;
+	 float area = PI * r * r;
+	 cout << "The area of the circle is: " << area << endl;
+
+ }
+void circleThroughDiameter()
+ {
+	 cout << "Enter the diameter of the circle: ";
+	 cin >> y;
+	 float area = PI * (y / 2) * (y / 2);
+	 cout << "The area of the circle is: " << area << endl;
+ }
+void dimeterThroughArea()
+ {
+	 cout << "Enter the area of the circle: ";
+	 cin >> y;
+	 float diameter = 2 * sqrt(y / PI);
+	 cout << "The diameter of the circle is: " << diameter << endl;
+}
+void circumference ()
+ {
+	 cout << "Enter the radius of the circle: ";
+	 cin >> r;
+	 float circumference = 2 * PI * r;
+	 cout << "The circumference of the circle is: " << circumference << endl;
+ }
+void diametarThroughCircumference()
+ {
+	 cout << "Enter the circumference of the circle: ";
+	 cin >> y;
+	 float diameter = y / PI;
+	 cout << "The diameter of the circle is: " << diameter << endl;
+
+ }
+void circleInscribedSquare()
+ {
+	 cout << "Enter the radius of the circle: ";
+	 cin >> r;
+	 float side = r * sqrt(2);
+	 cout << "The side length of the inscribed square is: " << side << endl;
+}
+void circleDescribedAroundSquare()
+ {
+	 cout << "Enter the side length of the square: ";
+	 float side;
+	 cin >> side;
+	 float radius = (side * sqrt(2)) / 2;
+	 cout << "The radius of the circumscribed circle is: " << radius << endl;
+}
+void circleThroughCircumference()
+ {
+	 cout << "Enter the circumference of the circle: ";
+	 cin >> y;
+	 float area = (y * y) / (4 * PI);
+	 cout << "The area of the circle is: " << area << endl;
+}
+void circleInscribedInIsoscelesTriangle()
+ {
+	 cout << "Enter the base and height of the isosceles triangle: ";
+	 float base, height;
+	 cin >> base >> height;
+	 float radius = (base * height) / (2 * sqrt((base * base) + (4 * height * height)));
+	 cout << "The radius of the inscribed circle is: " << radius << endl;
+}
+void circleDescribedAroundIsoscelesTriangle()
+ {
+	 cout << "Enter the lengths of the equal sides and the base of the isosceles triangle: ";
+	 float side, base;
+	 cin >> side >> base;
+	 float height = sqrt((side * side) - ((base * base) / 4));
+	 float radius = (side * side * base) / (4 * sqrt(side * (side + base) * (side - base) * (side - base)));
+	 cout << "The radius of the circumscribed circle is: " << radius << endl;
+}
+void circleinscribedAroundArbitraryTriangle()
+ {
+	 cout << "Enter the lengths of the sides of the triangle: ";
+	 float a, b, c;
+	 cin >> a >> b >> c;
+	 float s = (a + b + c) / 2;
+	 float area = sqrt(s * (s - a) * (s - b) * (s - c));
+	 float radius = area / s;
+	 cout << "The radius of the inscribed circle is: " << radius << endl;
+}
+void circleDescribedAroundArbitraryTriangle()
+ {
+	 cout << "Enter the lengths of the sides of the triangle: ";
+	 float a, b, c;
+	 cin >> a >> b >> c;
+	 float s = (a + b + c) / 2;
+	 float area = sqrt(s * (s - a) * (s - b) * (s - c));
+	 float radius = (a * b * c) / (4 * area);
+	 cout << "The radius of the circumscribed circle is: " << radius << endl;
+}
+
+int main()
+{
+	cout << "do you want to calculte circle area (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleArea();
+	}
+	cout << "do you want to calculte circle area through diameter (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleThroughDiameter();
+	}
+	cout << "do you want to calculte circle diameter through area (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		dimeterThroughArea();
+	}
+	cout << "do you want to calculte circle circumference (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circumference();
+	}
+	cout << "do you want to calculte circle diameter through circumference (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		diametarThroughCircumference();
+	}
+	cout << "do you want to calculte circle inscribed square side length (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleInscribedSquare();
+	}
+	cout << "do you want to calculte circle described around square (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleDescribedAroundSquare();
+	}
+	cout << "do you want to calculte circle area through circumference (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleThroughCircumference();
+	}
+	cout << "do you want to calculte circle inscribed in isosceles triangle (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleInscribedInIsoscelesTriangle();
+	}
+	cout << "do you want to calculte circle described around isosceles triangle (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleDescribedAroundIsoscelesTriangle();
+	}
+	cout << "do you want to calculte circle inscribed around arbitrary triangle (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleinscribedAroundArbitraryTriangle();
+	}
+	cout << "do you want to calculte circle described around arbitrary triangle (1 to answer yes or 0 to answer no)" << endl;
+	if (cin >> x && x == 1)
+	{
+		circleDescribedAroundArbitraryTriangle();
+	}
+	cout << "Thank you for using the circle calculator!" << endl;
+
+
+	return 0;
+
+}
