@@ -1,0 +1,259 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void Name()
+{
+
+	string name;
+	cout << "my name is ali murtada" << endl;
+	cout << "And you ?" << endl;
+	getline(cin, name);
+	
+}
+int rectArea(int length, int width)
+{
+	return length * width;
+}
+
+int mySwapReturnX(int& x, int& y)
+{
+	int temp;
+	temp = x;
+	x = y;
+	y = temp;
+	return x;
+}
+
+int RectangleAreaThrouhgDiagonalAndShortSide(int diagonal, int shortside)
+{
+	return diagonal * sqrt(pow(diagonal, 2) - pow(shortside, 2));
+}
+
+int circleArea(int radius)
+{
+	int PI = 3.14;
+	return PI * pow(radius, 2);
+
+}
+
+int circleAreaThroughDiameter(int diameter)
+{
+	int PI = 3.14;
+	return PI * pow(diameter / 2, 2);
+} 
+
+int circleAreainscrbibedInSquare(int side)
+{
+	int PI = 3.14;
+	return PI * pow(side / 2, 2);
+}
+
+int CircleAreaAlongcircumference(int circumference)
+{
+	int PI = 3.14;
+	return PI * pow(circumference / (2 * PI), 2);
+}
+
+int CircleAreaInscribedInIsoscelesTriangle(int base, int height)
+{
+	int PI = 3.14;
+	return (base * height) / (4 * PI);
+}
+
+int CircleAreaCircleDescribedAroundArbitraryTriangle(int sideA, int sideB, int sideC)
+{
+	int PI = 3.14;
+	int s = (sideA + sideB + sideC) / 2;
+	return (sideA * sideB * sideC) / (4 * sqrt(s * (s - sideA) * (s - sideB) * (s - sideC)));
+}
+
+int Powers234(int x)
+{
+	int x2;
+	int x3;
+	int x4;
+	 x2 = pow(x,2);
+	 x3 = pow(x, 3);
+	return x4 = pow(x, 4);
+	
+}
+
+int powersofX(int x, int y)
+{
+	return pow(x, y);
+}
+
+int TaskDurationInseconds(int day ,int hours, int minutes, int seconds)
+{
+	return (day * 3600 * 24) + (hours * 3600) + (minutes * 60) + seconds;
+}
+
+int secondsToMinutesHoursDays(int totalSeconds)
+{
+	int days;
+	int hours;
+	int minutes;
+	int seconds;
+	days = totalSeconds / (3600 * 24);
+	hours = (totalSeconds % (3600 * 24)) / 3600;
+	minutes = (totalSeconds % 3600) / 60;
+	seconds = totalSeconds % 60;
+	cout << "Days: " << days << ", Hours: " << hours
+		<< ", Minutes: " << minutes << ", Seconds: " << seconds << endl;
+	return 0;
+}
+
+
+int main()
+{
+	Name();
+	int x;
+	int y;
+	int length;
+	int width;
+	cout << "do you want to swap two numbers "
+		<< " (1 for yes / 0 for no) " << endl;
+	if (cin >> x && x == 1)
+	{
+	cout << "please enter two numbers to swap " << endl;
+	cout << "Enter value of x and y " << endl;
+	cin >> x >> y;
+	cout << "Before swapping: " << endl;
+	cout << "x = " << x << ", y = " << y << endl;
+	mySwapReturnX(x, y);
+	cout << "After swapping: x = " << x << ", y = " << y << endl;
+	cout << "do you want to culcalte your rectangle area"
+		<< " (1 for yes / 0 for no) " << endl;
+}
+
+	cout << "do you want to calculate rectangle area"
+		<< " (1 for yes / 0 for no) " << endl;
+	if (cin >> x && x == 1)
+	{
+	cout << "Enter length and width of rectangle: " << endl;
+	cin >> length >> width;
+	cout << "Area of rectangle: " << rectArea(length, width) << endl;
+}
+
+	cout << "do you want to calculate rectangle area through diagonal and short side"
+		<< " (1 for yes / 0 for no) " << endl;
+	if (cin >> x && x == 1)
+		{
+		int diagonal;
+		int shortside;
+		cout << "Enter diagonal and short side of rectangle: " << endl;
+		cin >> diagonal >> shortside;
+		cout << "Area of rectangle: " << RectangleAreaThrouhgDiagonalAndShortSide(diagonal, shortside) << endl;
+	}
+
+cout << "do you want to calculate circle area"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int radius;
+	cout << "Enter radius of circle: " << endl;
+	cin >> radius;
+	cout << "Area of circle: " << circleArea(radius) << endl;
+
+}
+
+cout << "do you want to calculate circle area through diameter"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int diameter;
+	cout << "Enter diameter of circle: " << endl;
+	cin >> diameter;
+	cout << "Area of circle: " << circleAreaThroughDiameter(diameter) << endl;
+}
+
+cout << "do you want to calculate circle area inscribed in square"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int side;
+	cout << "Enter side of square: " << endl;
+	cin >> side;
+	cout << "Area of circle: " << circleAreainscrbibedInSquare(side) << endl;
+}
+
+cout << "do you want to calculate circle area along circumference"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int circumference;
+	cout << "Enter circumference of circle: " << endl;
+	cin >> circumference;
+	cout << "Area of circle: " << CircleAreaAlongcircumference(circumference) << endl;
+}
+
+cout << "do you want to calculate circle area inscribed in isosceles triangle"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int base;
+	int height;
+	cout << "Enter base and height of isosceles triangle: " << endl;
+	cin >> base >> height;
+	cout << "Area of circle: " << CircleAreaInscribedInIsoscelesTriangle(base, height) << endl;
+}
+
+cout << "do you want to calculate circle area described around arbitrary triangle"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int sideA;
+	int sideB;
+	int sideC;
+	cout << "Enter sides of arbitrary triangle: " << endl;
+	cin >> sideA >> sideB >> sideC;
+	cout << "Area of circle: " << CircleAreaCircleDescribedAroundArbitraryTriangle(sideA, sideB, sideC) << endl;
+		
+}
+
+cout << "do you want to calculate powers 2,3,4 of a number"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int number;
+	cout << "Enter a number: " << endl;
+	cin >> number;
+	cout << "Power 4 of the number: " << Powers234(number) << endl;	
+}
+
+cout << "do you want to calculate power of x to y"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int base;	
+	int exponent;
+	cout << "Enter base and exponent: " << endl;	
+	cin >> base >> exponent;
+	cout << "Result: " << powersofX(base, exponent) << endl;
+}
+
+cout << "do you want to calculate task duration in seconds"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int days;
+	int hours;
+	int minutes;
+	int seconds;
+	cout << "Enter days, hours, minutes, and seconds: " << endl;
+	cin >> days >> hours >> minutes >> seconds;
+	cout << "Total duration in seconds: " << TaskDurationInseconds(days, hours, minutes, seconds) << endl;
+}
+
+cout << "do you want to convert total seconds to days, hours, minutes, and seconds"
+<< " (1 for yes / 0 for no) " << endl;
+if (cin >> x && x == 1)
+{
+	int totalSeconds;
+	cout << "Enter total seconds: " << endl;
+	cin >> totalSeconds;
+	secondsToMinutesHoursDays(totalSeconds);
+}
+
+	return 0;
+}
