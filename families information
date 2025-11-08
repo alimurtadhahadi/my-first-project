@@ -1,0 +1,211 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strInfo 
+	{
+	string firstName;
+	string lastName;
+	int age;
+	string city;
+	string country;
+	string phoneNumber;
+	string email;
+	string gender;
+	string status;
+};
+
+void readInfo(strInfo &Info)
+
+{
+	cout << "please enter your first name" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.firstName);
+	cout << "please enter your last name" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.lastName);
+	cout << "please enter your age" << endl;
+	cin >> Info.age;
+	cout << "please enter your city" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.city);
+	cout << "please enter your country" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.country);
+	cout << "please enter your phone number" << endl;
+	cin >> Info.phoneNumber;
+	cout << "please enter your email" << endl;
+	cin >> Info.email;
+	cout << "please enter your gender" << endl;
+	cin >> Info.gender;
+	cout << "please enter your status" << endl;
+	cin >> Info.status;
+}
+
+void printInfo(strInfo Info)
+{
+	cout << "|====================================================|" << endl;
+	cout << "|----------------- your information -----------------|" << endl;
+	cout << "|first name  :" << Info.firstName << endl;
+	cout << "|last name   :" << Info.lastName << endl;
+	cout << "|age         :" << Info.age << endl;
+	cout << "|city        :" << Info.city << endl;
+	cout << "|country     :" << Info.country << endl;
+	cout << "|phone number:" << Info.phoneNumber << endl;
+	cout << "|email       :" << Info.email << endl;
+	cout << "|gender      :" << Info.gender <<endl;
+	cout << "|status      :" << Info.status << endl;
+	cout << "|----------------------------------------------------|" << endl << endl;
+	cout << "-----------------------------------------------------------------------" << endl;
+}
+
+int main()
+{
+	int x;
+	cout << "Welcome to the personal information program" << endl;
+	cout << "You can enter the information of up to 10 people" << endl;
+	cout << "-----------------------------------------------" << endl;
+	cout << "do you want to enter your information"<<endl <<"note:(1 to answer yes and 0 to answer no )" << endl;
+	if (cin >> x && x == 1)
+	{
+		cout << "please enter your information" << endl;
+	strInfo person1Info;
+	readInfo(person1Info);
+	printInfo(person1Info);
+	//*****************************************************************************
+	cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+	{
+		cout << "please enter the information of another person" << endl;
+		strInfo person2Info;
+		readInfo(person2Info);
+		printInfo(person2Info);
+		//*****************************************************************************
+			cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person3Info;
+		readInfo(person3Info);
+		printInfo(person3Info);
+		//*****************************************************************************
+cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person4Info;
+		readInfo(person4Info);
+		printInfo(person4Info);
+		//*****************************************************************************
+cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person5Info;
+		readInfo(person5Info);
+		printInfo(person5Info);
+		//*****************************************************************************
+cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person6Info;
+		readInfo(person6Info);
+		printInfo(person6Info);
+		//*****************************************************************************	
+		cout << "Do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person7Info;
+		readInfo(person7Info);
+		printInfo(person7Info);
+		//*****************************************************************************
+cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person8Info;
+		readInfo(person8Info);
+		printInfo(person8Info);
+		//*****************************************************************************
+cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person9Info;
+		readInfo(person9Info);
+		printInfo(person9Info);
+		//*****************************************************************************
+cout << "do you want to enter the information of another person" << endl;
+	if (cin >> x && x == 1)
+		{
+		cout << "please enter the information of another person" << endl;
+		strInfo person10Info;
+		readInfo(person10Info);
+		printInfo(person10Info);
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+	}
+	else
+	{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+		}
+	else 
+		{
+		cout << "thank you for using our program" << endl;
+		return 0;
+	}
+
+	
+
+	return 0;
+}
