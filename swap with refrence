@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void swapnumbers(int& num1, int& num2)
+{
+    int temp = num1;
+    num1 = num2;
+    num2 = temp;
+}
+
+void swapstrings(string& str1, string& str2)
+{
+    string temp = str1;
+    str1 = str2;
+    str2 = temp;
+}
+
+int main()
+{
+    int a, b;
+    string str1, str2;
+    cout << "Enter two numbers: " << endl;
+    cin >> a >> b;
+    cout << "Before swapping: " << a << " " << b << endl;
+    swapnumbers(a, b);
+    cout << "After swapping: " << a << " " << b << endl;
+    cout << "Enter two strings: " << endl;
+    cin.ignore();       
+    getline(cin, str1);   
+    getline(cin, str2);  
+    cout << "Before swapping: " << str1 << " | " << str2 << endl;
+    swapstrings(str1, str2);
+    cout << "After swapping: " << str1 << " | " << str2 << endl;
+
+    return 0;
+}
