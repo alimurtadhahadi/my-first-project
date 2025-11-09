@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+ 
+int main()
+{
+	float x[6];
+	x[0];
+	x[1];
+	x[2];
+	x[3];
+	x[4];
+	x[5];
+
+	cout << "please enter your 6 grades: " << endl;
+	cin >> x[0];
+	cin >> x[1];
+	cin >> x[2];
+	cin >> x[3];
+	cin >> x[4];
+	cin >> x[5];
+	float average = (x[0] + x[1] + x[2] + x[3] + x[4] + x[5]) / 6;
+	cout << "your average is: " << average << endl;
+
+
+}
