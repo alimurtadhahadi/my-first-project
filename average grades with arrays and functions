@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+void readAverage (float grade[6])
+{
+	cout << "Enter 6 your grades: ";
+	cin >> grade[0] >> grade[1] >> grade[2] >> grade[3] >> grade[4] >> grade[5];
+	
+
+
+}
+
+void printAverage (float grade [6])
+{
+	float sum = grade[0] + grade[1] + grade[2] + grade[3] + grade[4] + grade[5];
+	float average = sum / 6;
+	cout << "Your average is: " << average << endl;
+}
+ 
+int main()
+{
+	float grade[6];
+	readAverage(grade);
+	printAverage(grade);
+
+
+
+	return 0;
+
+}
