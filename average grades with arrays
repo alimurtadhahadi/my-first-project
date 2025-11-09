@@ -22,5 +22,6 @@ int main()
 	float average = (x[0] + x[1] + x[2] + x[3] + x[4] + x[5]) / 6;
 	cout << "your average is: " << average << endl;
 
+return 0;
 
 }
