@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct questions
+{
+	string name;
+	int age;
+	bool hasDriverLicense;
+
+};
+
+void readUserAnswers(questions &User)
+{
+	cout << "Hi,what's your name" << endl;
+	getline(cin, User.name);
+	cout << "How old are you" << endl;
+	cin >> User.age;
+	cout << "Do you have driver license" << endl <<
+	"please answer by 1 (for yes) or 0 (for no)" << endl;
+	cin >> User.hasDriverLicense;
+}
+void printDecideHiring(questions User)
+{
+	if (User.age >= 21 && User.hasDriverLicense == 1)
+	{
+
+		cout << "you are hired" << endl;
+
+	}
+	else
+	{
+
+		cout << "you are rejected" << endl;
+
+	}
+
+
+}
+
+int main()
+{
+	questions User;
+	readUserAnswers(User);
+	printDecideHiring(User);
+
+	return 0;
+
+}
