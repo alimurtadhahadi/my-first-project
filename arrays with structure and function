@@ -1,0 +1,82 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+struct stInfo
+{
+	string firstname;
+	string lastname;
+	int age;
+	string city;
+	string country;
+	string phone;
+	string email;
+	string status;
+	string gender;
+	string job;
+	int monthiy_salary;
+	int yearly_salary = monthiy_salary * 12;
+	string experience;
+};
+void ReadInfo(stInfo &person)
+{
+	cout << "Enter First Name: ";
+	cin >> person.firstname;
+	cout << "Enter Last Name: ";
+	cin >> person.lastname;
+	cout << "Enter Age: ";
+	cin >> person.age;
+	cout << "Enter City: ";
+	cin >> person.city;
+	cout << "Enter Country: ";
+	cin >> person.country;
+	cout << "Enter Phone: ";
+	cin >> person.phone;
+	cout << "Enter Email: ";
+	cin >> person.email;
+	cout << "Enter Status: ";
+	cin >> person.status;
+	cout << "Enter Gender: ";
+	cin >> person.gender;
+	cout << "Enter Job: ";
+	cin >> person.job;
+	cout << "Enter monthly salary: ";
+	cin >> person.monthiy_salary;
+	cout << "Enter experience: ";
+	cin >> person.experience;
+}
+void printInfo(stInfo person)
+{
+	cout << "|________________________________________________|" << endl;
+	cout << "|First name       :" << person.firstname << endl;
+	cout << "|Last name        :" << person.lastname << endl;
+	cout << "|Age              :" << person.age << endl;
+	cout << "|City             :" << person.city << endl;
+	cout << "|Country          :" << person.country << endl;
+	cout << "|Phone            :" << person.phone << endl;
+	cout << "|Email            :" << person.email << endl;
+	cout << "|Stutes           :" << person.status << endl;
+	cout << "|Gender           :" << person.gender << endl;
+	cout << "|Job              :" << person.job << endl;
+	cout << "|Monthly salary   :" << person.monthiy_salary << endl;
+	cout << "|Yearly salary    :" << person.yearly_salary << endl;
+	cout << "|Experience       :" << person.experience << endl;
+	cout << "|_________________________________________________|" << endl;
+}
+void ReadPersonsInfo(stInfo Person[2])
+{
+	ReadInfo(Person[0]);
+	ReadInfo(Person[1]);
+}
+void PrintPersonsInfo(stInfo Person[2])
+{
+	printInfo(Person[0]);
+	printInfo(Person[1]);
+}
+int main()
+{
+	stInfo Person[2];
+	ReadPersonsInfo(Person);
+	PrintPersonsInfo(Person);
+
+	return 0;
+}
