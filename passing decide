@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct questions
+{
+	string name;
+	int grade;
+};
+void ReadGrade(questions& student)
+{
+	cout << "Hi student,What's your name?" << endl;
+	getline(cin, student.name);
+	cout << "Hi " << student.name << ",what's your grade in exam" << endl;
+	cin >> student.grade;
+}
+void passingDecide(questions student)
+{
+	if (student.grade >= 50)
+	{
+		cout << "Goooood,you pass !/n";
+	}
+	else
+	{
+		cout << "nooo,you fail\n"
+			<< "good luck next year";
+	}
+}
+int main()
+{
+	questions student;
+	ReadGrade(student);
+	passingDecide(student);
+
+	return 0;
+}
