@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct questions
+{
+	string name;
+	int grade[6];
+	int Avrgrade;
+};
+void ReadGrade(questions &student)
+{
+	cout << "Hi student,What's your name?" << endl;
+	getline(cin, student.name);
+	cout << "Hi " << student.name << ",what's your grades in all exams" << endl;
+	cin >> student.grade[0];
+	cin >> student.grade[1];
+	cin >> student.grade[2];
+	cin >> student.grade[3];
+	cin >> student.grade[4];
+	cin >> student.grade[5];
+}
+void calculteAVRgrade(questions& student)
+{
+	student.Avrgrade = (student.grade[0] + student.grade[1] + student.grade[2]
+		+ student.grade[3] + student.grade[4] + student.grade[5]) / 6;
+}
+void passingDecide(questions student)
+{
+	cout << "your avrege grade is :" << student.Avrgrade << endl;
+	if (student.Avrgrade >= 50)
+	{
+		cout << "Goooood,you pass !\n";
+	}
+	else
+	{
+		cout << "nooo,you fail\n"
+			<< "good luck next year";
+	}
+}
+int main()
+{
+	questions student;
+	ReadGrade(student);
+	calculteAVRgrade(student);
+	passingDecide(student);
+
+	return 0;
+}
