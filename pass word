@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Account {
+    string name;            
+    string password;
+    int    answer;
+    string passwordTry;
+};
+
+void savePassword(Account& user) {
+    cout << "Hi user, enter your name :" << endl;
+    if (cin.peek() == '\n') cin.ignore();  
+    getline(cin, user.name);
+
+    cout << "Create a new password (no spaces):" << endl;
+    cin >> user.password;
+}
+
+bool openAccount(Account& user) {
+    cout << "Do you want to open your account? (1=yes, 0=no):" << endl;
+    cin >> user.answer;
+
+    if (user.answer == 1) 
+    {
+        cout << "Please enter password:" << endl;
+        cin >> user.passwordTry;
+
+        if (user.passwordTry == user.password) {
+            cout << "Right password\n";
+            return true;
+        }
+        else
+        {
+            cout << "Wrong password\n";
+            return false;
+        }
+    }
+    else 
+    {
+        cout << "See you later\n";
+        return false;
+    }
+}
+
+int main() {
+    Account user;
+    savePassword(user);
+    bool ok = openAccount(user);
+
+    if (ok) {
+        cout << "Welcome, " << user.name << "!\n";
+    }
+    else {
+        cout << "Goodbye.\n";
+    }
+    return 0;
+}
