@@ -1,0 +1,676 @@
+#include <iostream>
+using namespace std;
+
+enum enScreanColor {
+    black = 0, blue = 1, green = 2, cyan = 3, red = 4,
+    purple = 5, yellow = 6, white = 7, gray = 8,
+    light_blue = 9, light_green = 10, light_cyan = 11,
+    light_red = 12, light_purple = 13, light_yellow = 14,
+    white_light = 15
+};
+enum enTextColor {
+    line_black = 0, line_blue = 1, line_green = 2, line_cyan = 3, line_red = 4,
+    line_purple = 5, line_yellow = 6, line_white = 7, line_gray = 8,
+    line_light_blue = 9, line_light_green = 10, line_light_cyan = 11,
+    line_light_red = 12, line_light_purple = 13, line_light_yellow = 14,
+    line_white_light = 15
+};
+
+int main()
+{
+	int C1, C2;
+	enScreanColor ColorScrean;
+	enTextColor ColorText;
+	cout << "Enter the screen color (0-15): ";
+	cin >> C1;
+	ColorScrean = (enScreanColor)C1;
+    if (ColorScrean == enScreanColor::black)
+    {
+		system("color 0F");
+		cout << "Screen color set to black." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 00");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 01");
+		else if (ColorText == enTextColor::line_green)
+			system("color 02");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 03");
+		else if (ColorText == enTextColor::line_red)
+			system("color 04");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 05");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 06");
+		else if (ColorText == enTextColor::line_white)
+			system("color 07");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 08");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 09");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 0A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 0B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 0C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 0D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 0E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 0F");
+        
+    }
+	else if (ColorScrean == enScreanColor::blue)
+	{
+		system("color 1F");
+		cout << "Screen color set to blue." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 10");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 11");
+		else if (ColorText == enTextColor::line_green)
+			system("color 12");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 13");
+		else if (ColorText == enTextColor::line_red)
+			system("color 14");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 15");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 16");
+		else if (ColorText == enTextColor::line_white)
+			system("color 17");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 18");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 19");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 1A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 1B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 1C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 1D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 1E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 1F");
+	}
+	else if (ColorScrean == enScreanColor::green)
+	{
+		system("color 2F");
+		cout << "Screen color set to green." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 20");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 21");
+		else if (ColorText == enTextColor::line_green)
+			system("color 22");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 23");
+		else if (ColorText == enTextColor::line_red)
+			system("color 24");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 25");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 26");
+		else if (ColorText == enTextColor::line_white)
+			system("color 27");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 28");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 29");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 2A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 2B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 2C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 2D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 2E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 2F");
+	}
+	else if (ColorScrean == enScreanColor::cyan)
+	{
+		system("color 3F");
+		cout << "Screen color set to cyan." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 30");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 31");
+		else if (ColorText == enTextColor::line_green)
+			system("color 32");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 33");
+		else if (ColorText == enTextColor::line_red)
+			system("color 34");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 35");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 36");
+		else if (ColorText == enTextColor::line_white)
+			system("color 37");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 38");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 39");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 3A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 3B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 3C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 3D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 3E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 3F");
+	}
+	else if (ColorScrean == enScreanColor::red)
+	{
+		system("color 4F");
+		cout << "Screen color set to red." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 40");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 41");
+		else if (ColorText == enTextColor::line_green)
+			system("color 42");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 43");
+		else if (ColorText == enTextColor::line_red)
+			system("color 44");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 45");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 46");
+		else if (ColorText == enTextColor::line_white)
+			system("color 47");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 48");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 49");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 4A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 4B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 4C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 4D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 4E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 4F");
+	}
+	else if (ColorScrean == enScreanColor::purple)
+	{
+		system("color 5F");
+		cout << "Screen color set to purple." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 50");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 51");
+		else if (ColorText == enTextColor::line_green)
+			system("color 52");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 53");
+		else if (ColorText == enTextColor::line_red)
+			system("color 54");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 55");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 56");
+		else if (ColorText == enTextColor::line_white)
+			system("color 57");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 58");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 59");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 5A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 5B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 5C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 5D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 5E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 5F");
+	}
+	else if (ColorScrean == enScreanColor::yellow)
+	{
+		system("color 6F");
+		cout << "Screen color set to yellow." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 60");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 61");
+		else if (ColorText == enTextColor::line_green)
+			system("color 62");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 63");
+		else if (ColorText == enTextColor::line_red)
+			system("color 64");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 65");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 66");
+		else if (ColorText == enTextColor::line_white)
+			system("color 67");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 68");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 69");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 6A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 6B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 6C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 6D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 6E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 6F");
+	}
+	else if (ColorScrean == enScreanColor::white)
+	{
+		system("color 7F");
+		cout << "Screen color set to white." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 70");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 71");
+		else if (ColorText == enTextColor::line_green)
+			system("color 72");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 73");
+		else if (ColorText == enTextColor::line_red)
+			system("color 74");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 75");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 76");
+		else if (ColorText == enTextColor::line_white)
+			system("color 77");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 78");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 79");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 7A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 7B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 7C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 7D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 7E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 7F");
+	}
+	else if (ColorScrean == enScreanColor::gray)
+	{
+		system("color 8F");
+		cout << "Screen color set to gray." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 80");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 81");
+		else if (ColorText == enTextColor::line_green)
+			system("color 82");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 83");
+		else if (ColorText == enTextColor::line_red)
+			system("color 84");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 85");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 86");
+		else if (ColorText == enTextColor::line_white)
+			system("color 87");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 88");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 89");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 8A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 8B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 8C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 8D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 8E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 8F");
+	}
+	else if (ColorScrean == enScreanColor::light_blue)
+	{
+		system("color 9F");
+		cout << "Screen color set to light blue." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color 90");
+		else if (ColorText == enTextColor::line_blue)
+			system("color 91");
+		else if (ColorText == enTextColor::line_green)
+			system("color 92");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color 93");
+		else if (ColorText == enTextColor::line_red)
+			system("color 94");
+		else if (ColorText == enTextColor::line_purple)
+			system("color 95");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color 96");
+		else if (ColorText == enTextColor::line_white)
+			system("color 97");
+		else if (ColorText == enTextColor::line_gray)
+			system("color 98");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color 99");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color 9A");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color 9B");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color 9C");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color 9D");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color 9E");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color 9F");
+	}
+	else if (ColorScrean == enScreanColor::light_green)
+	{
+		system("color AF");
+		cout << "Screen color set to light green." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color A0");
+		else if (ColorText == enTextColor::line_blue)
+			system("color A1");
+		else if (ColorText == enTextColor::line_green)
+			system("color A2");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color A3");
+		else if (ColorText == enTextColor::line_red)
+			system("color A4");
+		else if (ColorText == enTextColor::line_purple)
+			system("color A5");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color A6");
+		else if (ColorText == enTextColor::line_white)
+			system("color A7");
+		else if (ColorText == enTextColor::line_gray)
+			system("color A8");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color A9");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color AA");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color AB");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color AC");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color AD");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color AE");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color AF");
+	}
+	else if (ColorScrean == enScreanColor::light_cyan)
+	{
+		system("color BF");
+		cout << "Screen color set to light cyan." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color B0");
+		else if (ColorText == enTextColor::line_blue)
+			system("color B1");
+		else if (ColorText == enTextColor::line_green)
+			system("color B2");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color B3");
+		else if (ColorText == enTextColor::line_red)
+			system("color B4");
+		else if (ColorText == enTextColor::line_purple)
+			system("color B5");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color B6");
+		else if (ColorText == enTextColor::line_white)
+			system("color B7");
+		else if (ColorText == enTextColor::line_gray)
+			system("color B8");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color B9");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color BA");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color BB");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color BC");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color BD");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color BE");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color BF");
+	}
+	else if (ColorScrean == enScreanColor::light_red)
+	{
+		system("color CF");
+		cout << "Screen color set to light red." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color C0");
+		else if (ColorText == enTextColor::line_blue)
+			system("color C1");
+		else if (ColorText == enTextColor::line_green)
+			system("color C2");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color C3");
+		else if (ColorText == enTextColor::line_red)
+			system("color C4");
+		else if (ColorText == enTextColor::line_purple)
+			system("color C5");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color C6");
+		else if (ColorText == enTextColor::line_white)
+			system("color C7");
+		else if (ColorText == enTextColor::line_gray)
+			system("color C8");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color C9");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color CA");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color CB");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color CC");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color CD");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color CE");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color CF");
+	}
+	else if (ColorScrean == enScreanColor::light_purple)
+	{
+		system("color DF");
+		cout << "Screen color set to light purple." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color D0");
+		else if (ColorText == enTextColor::line_blue)
+			system("color D1");
+		else if (ColorText == enTextColor::line_green)
+			system("color D2");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color D3");
+		else if (ColorText == enTextColor::line_red)
+			system("color D4");
+		else if (ColorText == enTextColor::line_purple)
+			system("color D5");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color D6");
+		else if (ColorText == enTextColor::line_white)
+			system("color D7");
+		else if (ColorText == enTextColor::line_gray)
+			system("color D8");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color D9");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color DA");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color DB");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color DC");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color DD");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color DE");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color DF");
+	}
+	else if (ColorScrean == enScreanColor::light_yellow)
+	{
+		system("color EF");
+		cout << "Screen color set to light yellow." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color E0");
+		else if (ColorText == enTextColor::line_blue)
+			system("color E1");
+		else if (ColorText == enTextColor::line_green)
+			system("color E2");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color E3");
+		else if (ColorText == enTextColor::line_red)
+			system("color E4");
+		else if (ColorText == enTextColor::line_purple)
+			system("color E5");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color E6");
+		else if (ColorText == enTextColor::line_white)
+			system("color E7");
+		else if (ColorText == enTextColor::line_gray)
+			system("color E8");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color E9");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color EA");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color EB");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color EC");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color ED");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color EE");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color EF");
+	}
+	else if (ColorScrean == enScreanColor::white_light)
+	{
+		system("color FF");
+		cout << "Screen color set to white light." << endl;
+		cout << "Enter the text color (0-15): ";
+		cin >> C2;
+		ColorText = (enTextColor)C2;
+		if (ColorText == enTextColor::line_black)
+			system("color F0");
+		else if (ColorText == enTextColor::line_blue)
+			system("color F1");
+		else if (ColorText == enTextColor::line_green)
+			system("color F2");
+		else if (ColorText == enTextColor::line_cyan)
+			system("color F3");
+		else if (ColorText == enTextColor::line_red)
+			system("color F4");
+		else if (ColorText == enTextColor::line_purple)
+			system("color F5");
+		else if (ColorText == enTextColor::line_yellow)
+			system("color F6");
+		else if (ColorText == enTextColor::line_white)
+			system("color F7");
+		else if (ColorText == enTextColor::line_gray)
+			system("color F8");
+		else if (ColorText == enTextColor::line_light_blue)
+			system("color F9");
+		else if (ColorText == enTextColor::line_light_green)
+			system("color FA");
+		else if (ColorText == enTextColor::line_light_cyan)
+			system("color FB");
+		else if (ColorText == enTextColor::line_light_red)
+			system("color FC");
+		else if (ColorText == enTextColor::line_light_purple)
+			system("color FD");
+		else if (ColorText == enTextColor::line_light_yellow)
+			system("color FE");
+		else if (ColorText == enTextColor::line_white_light)
+			system("color FF");
+	}
+	else 
+	{
+		cout << "Invalid screen color." << endl;
+	}
+	return 0;
+
+
+
+}
