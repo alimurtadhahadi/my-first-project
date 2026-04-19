@@ -1,0 +1,154 @@
+#include <iostream>
+using namespace std;
+
+struct stGrades
+{
+	int arabic;
+	int english;
+	int math;
+	int computer;
+	int history;
+	int geography;
+	int art;
+	int PE;
+	int islamic_education;
+	int moral_education;
+	int physics;
+	int chemistry;
+	int biology;
+	float average;
+};
+
+int main()
+{
+	stGrades student1;
+
+	cout << "Enter the grades of the student in the following subjects: " << endl;
+
+	cout << "Arabic: ";
+	cin >> student1.arabic;
+
+	cout << "English: ";
+	cin >> student1.english;
+
+	cout << "Math: ";
+	cin >> student1.math;
+
+	cout << "Computer: ";
+	cin >> student1.computer;
+
+	cout << "History: ";
+	cin >> student1.history;
+
+	cout << "Geography: ";
+	cin >> student1.geography;
+
+	cout << "Art: ";
+	cin >> student1.art;
+
+	cout << "PE: ";
+	cin >> student1.PE;
+
+	cout << "Islamic Education: ";
+	cin >> student1.islamic_education;
+
+	cout << "Moral Education: ";
+	cin >> student1.moral_education;
+
+	cout << "Physics: ";
+	cin >> student1.physics;
+
+	cout << "Chemistry: ";
+	cin >> student1.chemistry;
+
+	cout << "Biology: ";
+	cin >> student1.biology;
+
+	student1.average = (student1.arabic + student1.english
+		+ student1.math + student1.computer + student1.history
+		+ student1.geography + student1.art + student1.PE
+		+ student1.islamic_education + student1.moral_education
+		+ student1.physics + student1.chemistry + student1.biology) / 13.0;
+
+	cout << "The average grade of the student is: " << student1.average << endl;
+
+	if (student1.average == 100)
+	{
+		cout << "The student has an excellent grade." << endl;
+		cout << "You will be honored on 4/5." << endl;
+		cout << "You are exempt from general duty." << endl;
+	}
+	else if (student1.average >= 90)
+	{
+		cout << "The student has an excellent grade." << endl;
+
+		if (student1.arabic <= 75 || student1.english <= 75 || student1.math <= 75 || student1.computer <= 75
+			|| student1.history <= 75 || student1.geography <= 75 || student1.art <= 75 || student1.PE <= 75
+			|| student1.islamic_education <= 75 || student1.moral_education <= 75 || student1.physics <= 75
+			|| student1.chemistry <= 75 || student1.biology <= 75)
+		{
+			cout << "Your grades in some subjects are less than 75." << endl;
+			cout << "You are individually exempt." << endl;
+		}
+		else
+		{
+			cout << "You are exempt from general duty." << endl;
+		}
+	}
+	else if (student1.average >= 85)
+	{
+		cout << "The student has a very good grade." << endl;
+		cout << "You are exempt from general duty." << endl;
+
+		if (student1.arabic <= 75 || student1.english <= 75 || student1.math <= 75 || student1.computer <= 75
+			|| student1.history <= 75 || student1.geography <= 75 || student1.art <= 75 || student1.PE <= 75
+			|| student1.islamic_education <= 75 || student1.moral_education <= 75 || student1.physics <= 75
+			|| student1.chemistry <= 75 || student1.biology <= 75)
+		{
+			cout << "Your grades in some subjects are less than 75." << endl;
+			cout << "You are individually exempt." << endl;
+		}
+		else
+		{
+			cout << "You are exempt from general duty." << endl;
+		}
+	}
+	else if (student1.average >= 80)
+	{
+		cout << "The student has a very good grade." << endl;
+
+		if (student1.arabic >= 90 || student1.english >= 90 || student1.math >= 90 || student1.computer >= 90
+			|| student1.history >= 90 || student1.geography >= 90 || student1.art >= 90 || student1.PE >= 90
+			|| student1.islamic_education >= 90 || student1.moral_education >= 90 || student1.physics >= 90
+			|| student1.chemistry >= 90 || student1.biology >= 90)
+		{
+			cout << "You will take the end-of-year exams, except for the subjects in which you scored above 89." << endl;
+		}
+		else
+		{
+			cout << "You will take the end-of-year exams in all subjects." << endl;
+		}
+	}
+	else if (student1.average >= 70)
+	{
+		cout << "The student has a good grade." << endl;
+		cout << "You will take the end-of-year exams in all subjects." << endl;
+	}
+	else if (student1.average >= 60)
+	{
+		cout << "The student has a pass grade." << endl;
+		cout << "You will take the end-of-year exams in all subjects." << endl;
+	}
+	else if (student1.average >= 50)
+	{
+		cout << "The student has an average grade." << endl;
+		cout << "You will take the end-of-year exams in all subjects." << endl;
+	}
+	else
+	{
+		cout << "The student has a fail grade." << endl;
+		cout << "You will take the end-of-year exams in all subjects." << endl;
+	}
+
+	return 0;
+}
