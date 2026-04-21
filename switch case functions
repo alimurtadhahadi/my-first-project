@@ -1,0 +1,185 @@
+#include <iostream>
+using namespace std;
+
+void simple_calculator()
+{
+	double num1, num2;
+	char operation;
+	cout << "Enter first number: ";
+	cin >> num1;
+	cout << "Enter an operator (+, -, *, /): ";
+	cin >> operation;
+	cout << "Enter second number: ";
+	cin >> num2;
+	switch (operation)
+	{
+		case '+':
+			cout << "Result: " << num1 + num2 << endl;
+			break;
+		case '-':
+			cout << "Result: " << num1 - num2 << endl;
+			break;
+		case '*':
+			cout << "Result: " << num1 * num2 << endl;
+			break;
+		case '/':
+			if (num2 != 0)
+				cout << "Result: " << num1 / num2 << endl;
+			else
+				cout << "Error: Division by zero!" << endl;
+			break;
+		default:
+			cout << "Error: Invalid operator!" << endl;
+			break;
+	}
+}
+
+void Day_of_the_week()
+{
+	int day;
+	cout << "Enter a number (1-7) to get the corresponding day of the week: ";
+	cin >> day;
+	switch (day)
+	{
+		case 1:
+			cout << "Monday" << endl;
+			break;
+		case 2:
+			cout << "Tuesday" << endl;
+			break;
+		case 3:
+			cout << "Wednesday" << endl;
+			break;
+		case 4:
+			cout << "Thursday" << endl;
+			break;
+		case 5:
+			cout << "Friday" << endl;
+			break;
+		case 6:
+			cout << "Saturday" << endl;
+			break;
+		case 7:
+			cout << "Sunday" << endl;
+			break;
+		default:
+			cout << "Error: Invalid number! Please enter a number between 1 and 7." << endl;
+			break;
+	}
+}
+void Month_of_the_year()
+{
+	int month;
+	cout << "Enter a number (1-12) to get the corresponding month of the year: ";
+	cin >> month;
+	switch (month)
+	{
+		case 1:
+			cout << "January" << endl;
+			break;
+		case 2:
+			cout << "February" << endl;
+			break;
+		case 3:
+			cout << "March" << endl;
+			break;
+		case 4:
+			cout << "April" << endl;
+			break;
+		case 5:
+			cout << "May" << endl;
+			break;
+		case 6:
+			cout << "June" << endl;
+			break;
+		case 7:
+			cout << "July" << endl;
+			break;
+		case 8:
+			cout << "August" << endl;
+			break;
+		case 9:
+			cout << "September" << endl;
+			break;
+		case 10:
+			cout << "October" << endl;
+			break;
+		case 11:
+			cout << "November" << endl;
+			break;
+		case 12:
+			cout << "December" << endl;
+			break;
+		default:
+			cout << "Error: Invalid number! Please enter a number between 1 and 12." << endl;
+			break;
+	}
+}
+
+int main()
+{
+	int running1;
+	int running2;
+	int running3;
+
+	cout << "Welcome to the program!" << endl;
+	cout << "Please select an option:" << endl;
+	cout << "type 1 for simple calculator or 0 to ignore it" << endl;
+	cin >> running1;
+	switch (running1)
+	{
+		case 1:
+			simple_calculator();
+			break;
+		case 0:
+			cout << "Simple calculator ignored." << endl;
+			break;
+		default:
+			cout << "Error: Invalid input! Please enter 1 or 0." << endl;
+			break;
+	}
+	cout << "Please select an option:" << endl;
+	cout << "type 1 for Day of the week or 0 to ignore it" << endl;
+	cin >> running2;
+	switch (running2)
+	{
+		case 1:
+			Day_of_the_week();
+			break;
+		case 0:
+			cout << "Day of the week ignored." << endl;
+			break;
+		default:
+			cout << "Error: Invalid input! Please enter 1 or 0." << endl;
+			break;
+	}
+	cout << "Please select an option:" << endl;
+	cout << "type 1 for Month of the year or 0 to ignore it" << endl;
+		cin >> running3;
+		switch (running3)
+		{
+			case 1:
+				Month_of_the_year();
+				break;
+			case 0:
+				cout << "Month of the year ignored." << endl;
+				break;
+			default:
+				cout << "Error: Invalid input! Please enter 1 or 0." << endl;
+				break;
+
+			}
+		if (running1 != 1 && running2 != 1 && running3 != 1)
+			{
+			cout << "No options selected. Exiting program." << endl;
+		}
+		else
+		{
+			cout << "Thank you for using the program!" << endl;
+		}
+
+
+
+	
+	return 0;
+}
