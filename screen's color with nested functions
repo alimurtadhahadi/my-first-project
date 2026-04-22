@@ -1,0 +1,211 @@
+#include <iostream>
+#include <string>
+using namespace std;
+enum enScreenColor
+{
+	Black = 0,
+	Blue = 1,
+	Green = 2,
+	Cyan = 3,
+	Red = 4,
+	Magenta = 5,
+	Brown = 6,
+	LightGray = 7,
+	DarkGray = 8,
+	LightBlue = 9,
+	LightGreen = 10,
+	LightCyan = 11,
+	LightRed = 12,
+	LightMagenta = 13,
+	Yellow = 14,
+	White = 15
+};
+
+void screen_colors_menu()
+{
+	cout << "---------------------------------" << endl;
+	cout << "          screen colors" << endl;
+	cout << "---------------------------------" << endl;
+	cout << "0.black" << endl;
+	cout << "1.blue" << endl;
+	cout << "2.green" << endl;
+	cout << "3.cyan" << endl;
+	cout << "4.red" << endl;
+	cout << "5.magenta" << endl;
+	cout << "6.brown" << endl;
+	cout << "7.light gray" << endl;
+	cout << "8.dark gray" << endl;
+	cout << "9.light blue" << endl;
+	cout << "10.light green" << endl;
+	cout << "11.light cyan" << endl;
+	cout << "12.light red" << endl;
+	cout << "13.light magenta" << endl;
+	cout << "14.yellow" << endl;
+	cout << "15.white" << endl;
+	cout << "---------------------------------" << endl;
+	cout << "Please enter a color (0-15): " << endl;
+}
+enScreenColor ask_user_for_color()
+{
+	enScreenColor ScreenColor;
+	int user_input;
+	cin >> user_input;
+	if (user_input < 0 || user_input > 15)
+	{
+		cout << "Invalid color selection. Please enter a number between 0 and 15." << endl;
+		system("color 46");
+	}
+	return (enScreenColor)user_input;
+}
+string get_color_name(enScreenColor screenColor)
+{
+	switch (screenColor)
+	{
+		case enScreenColor::Black:
+			return "Black";
+			break;
+		case enScreenColor::Blue:
+			return "Blue";
+			break;
+		case enScreenColor::Green:
+			return "Green";
+			break;
+		case enScreenColor::Cyan:
+			return "Cyan";
+			break;
+		case enScreenColor::Red:
+			return "Red";
+			break;
+		case enScreenColor::Magenta:
+			return "Magenta";
+			break;
+		case enScreenColor::Brown:
+			return "Brown";
+			break;
+		case enScreenColor::LightGray:
+			return "Light Gray";
+			break;
+		case enScreenColor::DarkGray:
+			return "Dark Gray";
+			break;
+		case enScreenColor::LightBlue:
+			return "Light Blue";
+			break;
+		case enScreenColor::LightGreen:
+			return "Light Green";
+			break;
+		case enScreenColor::LightCyan:
+			return "Light Cyan";
+			break;
+		case enScreenColor::LightRed:
+			return "Light Red";
+			break;
+		case enScreenColor::LightMagenta:
+			return "Light Magenta";
+			break;
+		case enScreenColor::Yellow:
+			return "Yellow";
+			break;
+		case enScreenColor::White:
+			return "White";
+			break;
+		default:
+			return "unknown";
+			break;
+	}
+
+
+}
+void change_screen_color(enScreenColor screenColor)
+{
+	switch (screenColor)
+	{
+		case enScreenColor::Black:
+			system("color 0F");
+			break;
+		case enScreenColor::Blue:
+			system("color 1F");
+			break;
+		case enScreenColor::Green:
+			system("color 2F");
+			break;
+		case enScreenColor::Cyan:
+			system("color 3F");
+			break;
+		case enScreenColor::Red:
+			system("color 4F");
+			break;
+		case enScreenColor::Magenta:
+			system("color 5F");
+			break;
+		case enScreenColor::Brown:
+			system("color 6F");
+			break;
+		case enScreenColor::LightGray:
+			system("color 7F");
+			break;
+		case enScreenColor::DarkGray:
+			system("color 8F");
+			break;
+		case enScreenColor::LightBlue:
+			system("color 9F");
+			break;
+		case enScreenColor::LightGreen:
+			system("color AF");
+			break;
+		case enScreenColor::LightCyan:
+			system("color BF");
+			break;
+		case enScreenColor::LightRed:
+			system("color CF");
+			break;
+		case enScreenColor::LightMagenta:
+			system("color DF");
+			break;
+		case enScreenColor::Yellow:
+			system("color EF");
+			break;
+		case enScreenColor::White:
+			system("color FF");
+			break;
+		default:
+			system("color 0F");
+			break;
+	}
+	
+}
+int main()
+{
+	screen_colors_menu();
+	enScreenColor selected_color = ask_user_for_color();
+	cout << "You selected color: " << get_color_name(selected_color) << endl;
+	if (selected_color >= enScreenColor::Black && selected_color <= enScreenColor::White)
+	{
+		cout << "Changing screen color..." << endl;
+		change_screen_color(selected_color);
+		cout << "Is done" << endl;
+	}
+	else
+	{
+		cout << "Invalid color selection." << endl;
+		
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl; 
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+		cout << "error" << endl;
+	}
+	return 0;
+}
+
