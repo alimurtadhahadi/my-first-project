@@ -1,0 +1,163 @@
+#include <iostream>
+using namespace std;
+void Ascending_sequence()
+{
+	int start, end;
+	cout << "Enter the starting number: ";
+	cin >> start;
+	cout << "Enter the ending number: ";
+	cin >> end;
+	for (int i = start; i <= end; i++)
+	{
+		cout << i << " ";
+	}
+	cout << endl;
+}
+void Descending_sequence()
+{
+	int start, end;
+	cout << "Enter the starting number: ";
+	cin >> start;
+	cout << "Enter the ending number: ";
+	cin >> end;
+	for (int i = start; i >= end; i--)
+	{
+		cout << i << " ";
+	}
+	cout << endl;
+}
+void Sum_of_Odd_or_Even_sequence()
+{
+		int start, end;
+		cout << "Enter the starting number: ";
+		cin >> start;
+		cout << "Enter the ending number: ";
+		cin >> end;
+		int sum = 0;
+		for (int i = start; i <= end; i+=2)
+		{
+			sum += i;
+		}
+		if (start % 2 == 0)
+			{
+			cout << "The sum of even numbers between " << start << " and " << end << " is: " << sum << endl;
+		}
+		else
+		{
+			cout << "The sum of odd numbers between " << start << " and " << end << " is: " << sum << endl;
+		}
+}
+void factorial()
+{
+	int num;
+	cout << "Enter a number: ";
+	cin >> num;
+	int fact = 1;
+	for (int i = 1; i <= num; i++)
+	{
+		fact *= i;
+	}
+	cout << "The factorial of " << num << " is: " << fact << endl;
+}
+void power_of_M()
+{
+	int num, power;
+	cout << "Enter a number: ";
+	cin >> num;
+	cout << "Enter the power: ";
+	cin >> power;
+	int result = 1;
+	for (int i = 1; i <= power; i++)
+	{
+		result *= num;
+	}
+	cout << num << " raised to the power of " << power << " is: " << result << endl;
+
+}
+void alphabet()
+{
+	int choice;
+	cout << "type:1-for small letters." << endl;
+	cout << "     2-for capital letters." << endl;
+	cout << "     3-for both small and capital letters." << endl;
+	cin >> choice;
+	if (choice == 1)
+	{
+		for (int i = 97; i <= 122; i++)
+		{
+			cout << (char)i << " ";
+		}
+	}
+	else if (choice == 2)	
+	{
+		for (int i = 65; i <= 90; i++)
+		{
+			cout << (char)i << " ";
+		}
+	}
+	else if (choice == 3)
+	{
+		for (int i = 97; i <= 122; i++)
+		{
+			cout << (char)i << " ";
+
+		}
+		cout << endl;
+		for (int i = 65; i <= 90; i++)
+		{
+			cout << (char)i << " ";
+		}
+	}
+	else 
+	{
+		cout << "Invalid input." << endl;
+	}
+
+}
+
+
+int main() 
+{
+	int choice;
+	cout << "Choose an option:" << endl;
+	cout << "1. Ascending sequence" << endl;
+	cout << "2. Descending sequence" << endl;
+	cout << "3. Sum of odd or even sequence" << endl;
+	cout << "4. Factorial" << endl;
+	cout << "5. Power of M" << endl;
+	cout << "6. Alphabet" << endl;
+	cout << "Enter your choice: ";
+	cin >> choice;
+	if (choice == 1)
+	{
+		Ascending_sequence();
+
+	}
+	else if (choice == 2)
+	{
+		Descending_sequence();
+	}
+	else if (choice == 3)
+	{
+		Sum_of_Odd_or_Even_sequence();
+	}
+	else if (choice == 4)
+	{
+		factorial();
+	}
+	else if (choice == 5)
+	{
+		power_of_M();
+	}
+	else if (choice == 6)
+	{
+		alphabet();
+	}
+	else
+	{
+		cout << "Invalid choice." << endl;
+
+	}
+
+		return 0;
+}
