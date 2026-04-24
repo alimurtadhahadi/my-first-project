@@ -1,0 +1,93 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct strInfo
+{
+	string firstName;
+	string lastName;
+	int age;
+	string city;
+	string country;
+	string phoneNumber;
+	string email;
+	string gender;
+	string status;
+};
+
+void readInfo(strInfo& Info)
+
+{
+
+	cout << "please enter your first name" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.firstName);
+	cout << "please enter your last name" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.lastName);
+	cout << "please enter your age" << endl;
+	cin >> Info.age;
+	cout << "please enter your city" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.city);
+	cout << "please enter your country" << endl;
+	cin.ignore(1, '\n');
+	getline(cin, Info.country);
+	cout << "please enter your phone number" << endl;
+	cin >> Info.phoneNumber;
+	cout << "please enter your email" << endl;
+	cin >> Info.email;
+	cout << "please enter your gender" << endl;
+	cin >> Info.gender;
+	cout << "please enter your status" << endl;
+	cin >> Info.status;
+}
+
+void printInfo(strInfo Info)
+{
+	cout << "|====================================================|" << endl;
+	cout << "|----------------- your information -----------------|" << endl;
+	cout << "|first name  :" << Info.firstName << endl;
+	cout << "|last name   :" << Info.lastName << endl;
+	cout << "|age         :" << Info.age << endl;
+	cout << "|city        :" << Info.city << endl;
+	cout << "|country     :" << Info.country << endl;
+	cout << "|phone number:" << Info.phoneNumber << endl;
+	cout << "|email       :" << Info.email << endl;
+	cout << "|gender      :" << Info.gender << endl;
+	cout << "|status      :" << Info.status << endl;
+	cout << "|----------------------------------------------------|" << endl << endl;
+	cout << "-----------------------------------------------------------------------" << endl;
+}
+void ReadPersonsInfo(strInfo persons[100], int& Length)
+{
+	for (int i = 0; i < Length; i++)
+	{
+		cout << endl << "please enter your information for person " << i + 1 << endl;
+		readInfo(persons[i]);
+	}
+
+
+}
+void PrintPersonsInfo(strInfo persons[100], int Length)
+{
+	for (int i = 0; i < Length; i++)
+	{
+		cout << endl << "your information for person " << i + 1 << endl;
+		printInfo(persons[i]);
+	}
+}
+
+int main()
+{
+	strInfo persons[100];
+	int Length;
+	cout << "please enter the number of persons: ";
+	cin >> Length;
+	ReadPersonsInfo(persons, Length);
+	PrintPersonsInfo(persons, Length);
+
+
+
+
+	return 0;
+}
