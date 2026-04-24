@@ -1,0 +1,300 @@
+#include <iostream>
+using namespace std;
+void print_menu_of_squares_sizes()
+{
+	cout << "1. Very small square" << endl;
+	cout << "2. Small square" << endl;
+	cout << "3. Big square" << endl;
+	cout << "4. Very big square" << endl;
+	cout << "5. Giant square" << endl;
+}
+void print_gaint_square(int n)
+{
+	for (int x = 0; x < n; x++)
+	{
+		for (int i = 1; i < 31; i++)
+		{
+			for (int j = 1; j < 61; j++)
+			{
+				if (j == 1 || j == 60)
+				{
+
+					if (i == 1)
+					{
+						cout << "_";
+					}
+					else if (i == 30)
+					{
+						cout << "-";
+					}
+					else
+					{
+						cout << "|";
+					}
+
+
+				}
+				else if (i == 1)
+				{
+					cout << "_";
+
+				}
+				else if (i == 30)
+				{
+					cout << "-";
+				}
+				else if (j == 31 && i == 15)
+				{
+					cout << x+1;
+				}
+				else
+				{
+					cout << " ";
+				}
+			}
+
+			cout << endl;
+		}
+		cout << endl;
+	}
+}
+void print_Very_big_square(int n)
+{
+	for (int x = 0; x < n; x++)
+	{
+		for (int i = 1; i < 21; i++)
+		{
+			for (int j = 1; j < 41; j++)
+			{
+				if (j == 1 || j == 40)
+				{
+
+					if (i == 1)
+					{
+						cout << "_";
+					}
+					else if (i == 20)
+					{
+						cout << "-";
+					}
+					else
+					{
+						cout << "|";
+					}
+
+
+				}
+				else if (i == 1)
+				{
+					cout << "_";
+
+				}
+				else if (i == 20)
+				{
+					cout << "-";
+				}
+				else if (j == 21 && i == 10)
+				{
+					cout << x+1;
+				}
+				else
+				{
+					cout << " ";
+				}
+			}
+
+			cout << endl;
+		}
+		cout << endl;
+	}
+}
+void print_Big_square(int n)
+{
+	for (int x = 0; x < n; x++)
+	{
+		for (int i = 1; i < 11; i++)
+		{
+			for (int j = 1; j < 21; j++)
+			{
+				if (j == 1 || j == 20)
+				{
+
+					if (i == 1)
+					{
+						cout << "_";
+					}
+					else if (i == 10)
+					{
+						cout << "-";
+					}
+					else
+					{
+						cout << "|";
+					}
+
+
+				}
+				else if (i == 1)
+				{
+					cout << "_";
+
+				}
+				else if (i == 10)
+				{
+					cout << "-";
+				}
+				else if (j == 11 && i == 6)
+				{
+					cout << x+1;
+				}
+				else
+				{
+					cout << " ";
+				}
+			}
+
+			cout << endl;
+		}
+		cout << endl;
+	}
+}
+void print_small_square(int n)
+{
+	for (int x = 0; x < n; x++)
+	{
+		for (int i = 1; i < 6; i++)
+		{
+			for (int j = 1; j < 11; j++)
+			{
+				if (j == 1 || j == 10)
+				{
+
+					if (i == 1)
+					{
+						cout << "_";
+					}
+					else if (i == 5)
+					{
+						cout << "-";
+					}
+					else
+					{
+						cout << "|";
+					}
+
+
+				}
+				else if (i == 1)
+				{
+					cout << "_";
+
+				}
+				else if (i == 5)
+				{
+					cout << "-";
+				}
+				else if (j == 6 && i == 3)
+				{
+					cout << x+1;
+				}
+				else
+				{
+					cout << " ";
+				}
+			}
+
+			cout << endl;
+		}
+		cout << endl;
+	}
+}
+void print_very_small_square(int n)
+{
+	for (int x = 0; x < n; x++)
+	{
+		for (int i = 1; i < 5; i++)
+		{
+			for (int j = 1; j < 4; j++)
+			{
+				if (j == 1 || j == 3)
+				{
+
+					if (i == 1)
+					{
+						cout << "_";
+					}
+					else if (i == 3)
+					{
+						cout << "-";
+					}
+					else
+					{
+						cout << "|";
+					}
+
+
+				}
+				else if (i == 1)
+				{
+					cout << "_";
+
+				}
+				else if (i == 3)
+				{
+					cout << "-";
+				}
+				else if (j == 3 && i == 2)
+				{
+					cout << x+1;
+				}
+				else
+				{
+					cout << " ";
+				}
+			}
+
+			cout << endl;
+		}
+		cout << endl;
+	}
+}
+
+int main()
+{
+	int n;
+	int size;
+	cout << "what size of square do you want to print? (1-5): " << endl;
+	print_menu_of_squares_sizes();
+	cin >> size;
+	switch (size)
+	{
+	case 1:
+		cout << "how many squares do you want?" << endl;
+		cin >> n;
+		print_very_small_square(n);
+		break;
+	case 2:
+		cout << "how many squares do you want?" << endl;
+		cin >> n;
+		print_small_square(n);
+		break;
+	case 3:
+		cout << "how many squares do you want?" << endl;
+		cin >> n;
+		print_Big_square(n);
+		break;
+	case 4:
+		cout << "how many squares do you want?" << endl;
+		cin >> n;
+		print_Very_big_square(n);
+	case 5:
+		cout << "how many squares do you want?" << endl;
+		cin >> n;
+		print_gaint_square(n);
+		break;
+	default:
+		cout << "invalid input" << endl;
+		break;
+	}
+	return 0;
+}
