@@ -1,0 +1,132 @@
+#include <iostream>
+using namespace std;
+void inverted_right_triangle_by_Star()
+{
+	for (int i = 28; i >= 1; i--)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+void right_triangle_by_Star()
+{
+	for (int i = 1; i <= 28; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+void inverted_right_triangle_by_Number()
+{
+	for (int i = 14; i >= 1; i--)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			if (j == 1 || j >= 10) 
+			{
+				cout << j;
+			}
+			else
+			{
+				cout << " " << j;
+			}
+		}
+		cout << endl;
+	}
+}
+void right_triangle_by_numbers()
+{
+	for (int i = 1; i <= 14; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			if (j == 1 || j >= 10)
+			{
+				cout << j;
+			}
+			else
+			{
+				cout << " " << j;
+			}
+		}
+		cout << endl;
+	}
+}
+void inverted_right_triangle_by_alphabet()
+{
+	for (int character = 65; character <= 91; character++)
+	{
+		for (int character2 = 65; character2 <= 91 - (character - 65); character2++)
+		{
+			cout << char(character2);
+		}
+		cout << endl;
+	}
+}
+void right_triangle_by_alphabet()
+{
+	for (int character = 65; character <= 91; character++)
+	{
+		for (int character2 = 65; character2 <= character; character2++)
+		{
+			cout << char(character2);
+		}
+		cout << endl;
+	}
+}
+void Possibilities_of_two_letters_of_the_alphabet()
+{
+	int sequence = 0;
+	for (int character1 = 65; character1 <= 90; character1++)
+	{
+		for (int character2 = 65; character2 <= 90; character2++)
+		{
+			cout << sequence << ": " << char(character1) << char(character2) << endl;
+			sequence++;
+		}
+		cout << endl;
+	}
+}
+static void inverted_right_triangle_by_number()
+{
+	for (int i = 1; i <= 14; i++)
+	{
+		for (int j = i; j <= 14; j++)
+		{
+			if (j >= 10)
+			{
+				cout << j;
+			}
+			else
+			{
+				cout << j << " ";
+			}
+		}
+		cout << endl;
+	}
+}
+int main()
+{
+	inverted_right_triangle_by_alphabet();
+	right_triangle_by_alphabet();
+	inverted_right_triangle_by_Number();
+	right_triangle_by_numbers();
+	inverted_right_triangle_by_Star();
+	right_triangle_by_Star();
+	inverted_right_triangle_by_number();
+	cout << "do you want Possibilities of two letters of the alphabet (1 for yes/otherwise no)" << endl;
+	int choice;
+	cin >> choice;
+	if (choice == 1)
+	{
+		Possibilities_of_two_letters_of_the_alphabet();
+	}
+
+		return 0;
+}
