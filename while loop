@@ -1,0 +1,278 @@
+#include <iostream>
+using namespace std;
+
+void Ascending_sequence()
+{
+    int start, end;
+    cout << "Enter the starting number: ";
+    cin >> start;
+    cout << "Enter the ending number: ";
+    cin >> end;
+
+    int i = start;
+
+    while (end < start)
+    {
+        cout << "Invalid input, please enter again\n";
+        cout << "Enter the starting number: ";
+        cin >> start;
+        cout << "Enter the ending number: ";
+        cin >> end;
+        i = start;
+    }
+
+    while (i <= end)
+    {
+        cout << i << " ";
+        i++;
+    }
+    cout << endl;
+}
+
+void Descending_sequence()
+{
+    int start, end;
+    cout << "Enter the starting number: ";
+    cin >> start;
+    cout << "Enter the ending number: ";
+    cin >> end;
+
+    int i = start;
+
+    while (end > start)
+    {
+        cout << "Invalid input, please enter again\n";
+        cout << "Enter the starting number: ";
+        cin >> start;
+        cout << "Enter the ending number: ";
+        cin >> end;
+        i = start;
+    }
+
+    while (i >= end)
+    {
+        cout << i << " ";
+        i--;
+    }
+    cout << endl;
+}
+
+void Sum_of_Odd_or_Even_sequence()
+{
+    int start, end;
+    cout << "Enter the starting number: ";
+    cin >> start;
+    cout << "Enter the ending number: ";
+    cin >> end;
+
+    while (start == end)
+    {
+        cout << "Invalid input, enter different numbers\n";
+        cin >> start >> end;
+    }
+
+    int sum = 0;
+    int i;
+
+    if (start % 2 == 0)
+        i = start;
+    else
+        i = start + 1;
+
+    if (start < end)
+    {
+        while (i <= end)
+        {
+            sum += i;
+            i += 2;
+        }
+    }
+    else
+    {
+        while (i >= end)
+        {
+            sum += i;
+            i -= 2;
+        }
+    }
+
+    if (start % 2 == 0)
+        cout << "Sum of even numbers = " << sum << endl;
+    else
+        cout << "Sum of odd numbers = " << sum << endl;
+}
+
+void factorial()
+{
+    int num;
+    cout << "Enter a positive number: ";
+    cin >> num;
+
+    while (num < 0)
+    {
+        cout << "Enter a positive number: ";
+        cin >> num;
+    }
+
+    int fact = 1;
+    int i = num;
+
+    while (i >= 1)
+    {
+        fact *= i;
+        i--;
+    }
+
+    cout << "Factorial = " << fact << endl;
+}
+
+void power_of_M()
+{
+    int num, power;
+    cout << "Enter a number: ";
+    cin >> num;
+    cout << "Enter the power: ";
+    cin >> power;
+
+    int result = 1;
+    int i = 1;
+
+    while (i <= power)
+    {
+        result *= num;
+        i++;
+    }
+
+    cout << result << endl;
+}
+
+void sum_until_type_0()
+{
+    int num, sum = 0;
+
+    cout << "(type 0 to exit)\n";
+    cin >> num;
+
+    while (num != 0)
+    {
+        sum += num;
+        cin >> num;
+    }
+
+    cout << "Result = " << sum << endl;
+}
+
+void alphabet()
+{
+    int choice;
+    cout << "1-small\n2-capital\n3-both\n";
+    cin >> choice;
+
+    if (choice == 1)
+    {
+        int i = 97;
+        while (i <= 122)
+        {
+            cout << char(i) << " ";
+            i++;
+        }
+    }
+    else if (choice == 2)
+    {
+        int i = 65;
+        while (i <= 90) // تم التصحيح هنا
+        {
+            cout << char(i) << " ";
+            i++;
+        }
+    }
+    else if (choice == 3)
+    {
+        int i = 97, I = 65;
+        while (i <= 122 && I <= 90)
+        {
+            cout << char(i) << " " << char(I) << "  ";
+            i++;
+            I++;
+        }
+    }
+    else
+    {
+        cout << "Invalid input\n";
+    }
+}
+
+void ATM_PIN()
+{
+    int PIN, PINtry, choice;
+
+    cout << "Enter new PIN: ";
+    cin >> PIN;
+
+    cout << "Type 1 to open account: ";
+    cin >> choice;
+
+    if (choice == 1)
+    {
+        int i = 0;
+
+        cout << "Enter PIN: ";
+        cin >> PINtry;
+
+        while (PINtry != PIN && i < 2)
+        {
+            i++;
+            cout << "Wrong PIN, tries left: " << 3 - i << endl;
+            cin >> PINtry;
+        }
+
+        if (PINtry != PIN)
+            cout << "Card locked\n";
+        else
+            cout << "Welcome, balance = 7500\n";
+    }
+}
+
+void print_menu_and_choices()
+{
+    int choice;
+    cout << "(type 0 to exit)" << endl;
+    cout << "\n1.Ascending\n2.Descending\n3.Sum\n4.Factorial\n5.Power\n6.Sum until 0\n7.Alphabet\n8.ATM\n";
+    cin >> choice;
+
+    if (choice == 1) Ascending_sequence();
+    else if (choice == 2) Descending_sequence();
+    else if (choice == 3) Sum_of_Odd_or_Even_sequence();
+    else if (choice == 4) factorial();
+    else if (choice == 5) power_of_M();
+    else if (choice == 6) sum_until_type_0();
+    else if (choice == 7) alphabet();
+    else if (choice == 8) ATM_PIN();
+    else if (choice == 0)cout << "exit" << endl;
+    else cout << "Invalid\n";
+
+    while (choice != 0)
+    {
+        cout << "(type 0 to exit)" << endl;
+        cout << "\n1.Ascending\n2.Descending\n3.Sum\n4.Factorial\n5.Power\n6.Sum until 0\n7.Alphabet\n8.ATM\n";
+        cin >> choice;
+
+        if (choice == 1) Ascending_sequence();
+        else if (choice == 2) Descending_sequence();
+        else if (choice == 3) Sum_of_Odd_or_Even_sequence();
+        else if (choice == 4) factorial();
+        else if (choice == 5) power_of_M();
+        else if (choice == 6) sum_until_type_0();
+        else if (choice == 7) alphabet();
+        else if (choice == 8) ATM_PIN();
+        else if (choice == 0)cout << "exit" << endl;
+        else cout << "Invalid\n";
+    }
+}
+
+int main()
+{
+    print_menu_and_choices();
+
+    return 0;
+}
