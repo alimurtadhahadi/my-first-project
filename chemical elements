@@ -1,0 +1,185 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+string elements[118]
+{
+    "Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","Nitrogen","Oxygen","Fluorine","Neon",
+    "Sodium","Magnesium","Aluminum","Silicon","Phosphorus","Sulfur","Chlorine","Argon","Potassium","Calcium",
+    "Scandium","Titanium","Vanadium","Chromium","Manganese","Iron","Cobalt","Nickel","Copper","Zinc",
+    "Gallium","Germanium","Arsenic","Selenium","Bromine","Krypton","Rubidium","Strontium","Yttrium","Zirconium",
+    "Niobium","Molybdenum","Technetium","Ruthenium","Rhodium","Palladium","Silver","Cadmium","Indium","Tin",
+    "Antimony","Tellurium","Iodine","Xenon","Cesium","Barium","Lanthanum","Cerium","Praseodymium","Neodymium",
+    "Promethium", "Samarium", "Europium", "Gadolinium", "Terbium", "Dysprosium", "Holmium", "Erbium", "Thulium", "Ytterbium",
+    "Lutetium", "Hafnium", "Tantalum", "Tungsten", "Rhenium", "Osmium", "Iridium", "Platinum", "Gold", "Mercury",
+    "Thallium", "Lead", "Bismuth", "Polonium", "Astatine", "Radon", "Francium", "Radium", "Actinium", "Thorium",
+    "Protactinium", "Uranium", "Neptunium", "Plutonium", "Americium", "Curium", "Berkelium", "Californium", "Einsteinium", "Fermium",
+    "Mendelevium", "Nobelium", "Lawrencium", "Rutherfordium", "Dubnium", "Seaborgium", "Bohrium", "Hassium", "Meitnerium", "Darmstadtium",
+    "Roentgenium", "Copernicium", "Nihonium", "Flerovium", "Moscovium", "Livermorium", "Tennessine", "Oganesson"
+};
+
+string symboles[118]
+{
+    "H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn",
+    "Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr",
+    "Nd","Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg",
+    "Tl", "Pb", "Bi", "Po", "At", "Rn", "Fr", "Ra", "Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm",
+    "Md", "No", "Lr", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"
+};
+void print_element_before_user_number()
+{
+
+    
+
+    int element_range_wanted;
+
+    do {
+        cout << "Enter a number between 1 and 118 to show the chemical element before it: ";
+        cin >> element_range_wanted;
+
+        if (element_range_wanted >= 1 && element_range_wanted <= 118)
+        {
+            for (int i = 0; i < 118; i++)
+            {
+                cout << i + 1 << ". " << elements[i] << " ---> " << symboles[i] << endl;
+                if (i + 1 == element_range_wanted)
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            cout << "Invalid number, try again.\n";
+        }
+
+    } while (element_range_wanted < 1 || element_range_wanted > 118);
+}
+void transform_symbol_into_element_and_atomic_number()
+{
+    bool found;
+    string symbol;
+    do {
+        found = false;
+        cout << "please enter the the symbol (must be first letter capital otherwise small)or (type 0 to Exit) :";
+        cin >> symbol;
+        if (symbol == "0")
+        {
+            cout << "Exiting search..." << endl;
+            break;
+        }
+        for (int i = 0; i <= 117; i++)
+        {
+            if (symboles[i] == symbol)
+            {
+                cout << symboles[i] << " is element :(" << elements[i] << ") and his atomic number is :" << i + 1 << endl;
+                found = true;
+                break;
+            }
+        }
+        if (found == false)
+        {
+            cout << "Symbol not found! Remember: the first letter must be Capital (e.g., Ag, not ag)" << endl;
+            cout << "------------------------------------------------------------------------------------------------------" << endl;
+        }
+    } while (found != true);
+}
+string format_input(string s)
+{
+    if (s.length() == 0) return s;
+    s[0] = toupper(s[0]);
+    for (int i = 1; i < (int)s.length(); i++) {
+        s[i] = tolower(s[i]);
+    }
+    return s;
+}
+void  transform_element_into_symbol_and_atomic_number()
+{
+    bool found;
+    string element;
+    do {
+        found = false;
+        cout << "Please enter the element name (or type '0' to Exit): ";
+        cin >> element;
+
+        if (element == "0") {
+            cout << "Exiting search..." << endl;
+            break;
+        }
+
+        element = format_input(element);
+
+        for (int i = 0; i < 118; i++) {
+            if (elements[i] == element) {
+                cout << " Result: " << elements[i] << " (" << symboles[i] << ") | Atomic Number: " << i + 1 << endl;
+                found = true;
+                break;
+            }
+        }
+
+        if (found != true ) 
+        {
+            cout << "[-] Element not found! Please check your spelling." << endl;
+            cout << "----------------------------------------------------------------------" << endl;
+        }
+    } while (found != true);
+}
+void transform_atomic_number_into_element_symbol()
+{
+    int atomic_num;
+    do {
+        cout << "please enter your atomic number (0 to Exit)" << endl;
+        cin >> atomic_num;
+        if (atomic_num <= 0 || atomic_num >= 119)
+        {
+            cout << "invalid atomic number please enter between 1 and 118" << endl;
+        }
+        else
+        {
+            cout << atomic_num << ". is (" << elements[atomic_num - 1] << ")  (" << symboles[atomic_num - 1] << ")" << endl;
+        }
+    } while (atomic_num != 0);
+}
+int main()
+{
+    int choice;
+    do {
+        cout << "please type :" << endl;
+        cout << "|----------------------------------------------------------------------|" << endl;
+        cout << "|         MAIN /\\    /\\   |--- |\\  |  |  |                             |" << endl;
+        cout << "|             /  \\  /  \\  |--  | \\ |  |  |                             |" << endl;
+        cout << "|            /    \\/    \\ |___ |  \\|  \\_/   MENU                       |" << endl;
+        cout << "|----------------------------------------------------------------------|" << endl;
+        cout << "|0. Exit from program                                                  |" << endl;
+        cout << "|1. print elements before your element's number                        |" << endl;
+        cout << "|2. transform symbol into element and atomic number                    |" << endl;
+        cout << "|3. transform element into symbol and atomic number                    |" << endl;
+        cout << "|4. transform atomic number into element symbol                        |" << endl;
+        cout << "|----------------------------------------------------------------------|" << endl;
+        cin >> choice;
+        switch (choice) {
+        case 0:
+            cout << "Exiting program. Goodbye!" << endl;
+            break;
+
+        case 1:
+            print_element_before_user_number();
+            break;
+
+        case 2:
+            transform_symbol_into_element_and_atomic_number();
+            break;
+
+        case 3:
+            transform_element_into_symbol_and_atomic_number();
+            break;
+        case 4:
+            transform_atomic_number_into_element_symbol();
+            break;
+        default:
+            cout << "invalid choice! please try again" << endl;
+            break;
+        }
+    } while (choice != 0);
+    return 0;
+}
