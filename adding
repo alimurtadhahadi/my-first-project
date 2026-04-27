@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int sum = 0;
+	int length;
+	int user_Nums[100];
+	cout << "you can enter 100 numbers that will add only positive num to sum how many number do you want to enter" << endl;
+	cin >> length;
+	int i = 1;
+	while (i <= length)
+	{
+		cout << "number (" << i << "):";
+		cin >> user_Nums[i];
+		i++;
+	}
+	for (int i = 1; i <= length; i++)
+	{
+		if (user_Nums[i] <= 0)
+		{
+			cout << "\n(" << user_Nums[i] << ") is skipped because is negative" << endl;
+			continue;
+		}
+		cout << "----------------------------------------------------------------------------------------------" << endl;
+		cout << "the number (" << user_Nums[i] << ") is add to the sum (" << sum << ") and it became " << endl;
+		sum += user_Nums[i];
+		cout << sum << endl;
+		cout << "----------------------------------------------------------------------------------------------" << endl;
+
+	}
+	return 0;
+}
